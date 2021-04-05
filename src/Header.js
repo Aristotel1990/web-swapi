@@ -21,7 +21,7 @@ function Header() {
                 <li><Link to="/vehicles">Vehicles</Link></li>
                 <li><Link to="/populate" onClick={async()=>{
                   try {
-                    await axios.get('http://localhost:3090/populate')
+                    await axios.get('https://server-swawpi.herokuapp.com/populate')
 
                   } catch (error) {
                     dispatch({type:'ERRORE',payload:"Problem on importing data in database from SWAPI Star War APi"})

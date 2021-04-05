@@ -30,12 +30,12 @@ function Vehicles({history}) {
             },
         ];
         async function onInc(id) {
-          await axios.get(`http://localhost:3090/vehicles/${id}/inc_dec/?operator=inc`)
+          await axios.get(`https://server-swawpi.herokuapp.com/vehicles/${id}/inc_dec/?operator=inc`)
             dispatch({type:'INC_DEC_VEH',_id:id,inc:true})
         
         }
         async function onDec(id) {
-          await axios.get(`http://localhost:3090/vehicles/${id}/inc_dec/?operator=dec`)
+          await axios.get(`https://server-swawpi.herokuapp.com/vehicles/${id}/inc_dec/?operator=dec`)
           
             dispatch({type:'INC_DEC_VEH',_id:id,inc:false})
           }
@@ -43,7 +43,7 @@ function Vehicles({history}) {
         useEffect(() => {
   
           async function getData(){
-              const response = await axios.get('http://localhost:3090/vehicles');
+              const response = await axios.get('https://server-swawpi.herokuapp.com/vehicles');
               dispatch({type:'INSERT_DATA',itemVehic:response.data})
                   }
           getData()
