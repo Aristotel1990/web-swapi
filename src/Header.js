@@ -24,7 +24,7 @@ function Header() {
                     await axios.get('http://localhost:3090/populate')
 
                   } catch (error) {
-                    dispatch({type:'ERRORE',payload:"Problem on importing data in database from SWAPI Star War APi"})
+                    dispatch({type:'ERRORE',payload:"Problem on importing data in database from SWAPI Star War APi, you must run the local server to connect to the data on database!"})
                   }
     }               
                 }>Import new data from SWAPI API to Database </Link></li>
