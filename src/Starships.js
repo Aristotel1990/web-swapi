@@ -68,6 +68,7 @@ function Starships( {history}) {
       <div style={{background:"white"}} >
       <Table
     bordered
+    title={() => <h2 style={{color:'#ffc107' }}>STARSHIPS</h2>}
     size="small"
     pagination={{ position: [ 'bottomCenter']}}
     columns={columns}
