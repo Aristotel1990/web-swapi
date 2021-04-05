@@ -31,7 +31,7 @@ function ModalData({record,history,path}) {
    
   const onFinish = (values) => {
     try {
-      axios.post(`https://server-swawpi.herokuapp.com/${path}/${_id}/set`,values);
+      axios.post(`http://localhost:3090/${path}/${_id}/set`,values);
       dispatch({
          type: 'UPDATE_DATA',
          itemm: values,

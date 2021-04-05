@@ -36,7 +36,7 @@ function Starships( {history}) {
   
      async function onInc(id) {
        try {
-        await axios.get(`https://server-swawpi.herokuapp.com/starships/${id}/inc_dec/?operator=inc`)
+        await axios.get(`http://localhost:3090/starships/${id}/inc_dec/?operator=inc`)
         dispatch({type:'INC_DEC_STA',_id:id,inc:true})
       
        } catch (error) {
@@ -46,7 +46,7 @@ function Starships( {history}) {
        
       } 
       async function onDec(id) {
-        await axios.get(`https://server-swawpi.herokuapp.com/starships/${id}/inc_dec/?operator=dec`)
+        await axios.get(`http://localhost:3090/starships/${id}/inc_dec/?operator=dec`)
         
           dispatch({type:'INC_DEC_STA',_id:id,inc:false})
         }
@@ -55,7 +55,7 @@ function Starships( {history}) {
       useEffect(() => {
 
         async function getData(){
-            const response = await axios.get('https://server-swawpi.herokuapp.com/starships');
+            const response = await axios.get('http://localhost:3090/starships');
             dispatch({type:'INSERT_DATA',itemStar:response.data})
             console.log(response.data)
                 }
