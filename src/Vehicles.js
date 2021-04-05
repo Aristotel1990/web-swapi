@@ -56,7 +56,7 @@ function Vehicles({history}) {
       
       <Table
       columns={columns}
-      title={() => <h2 style={{color:'#3e91ab' }}>VEHICLES</h2>
+      title={() => <h2 style={{color:'#3e91ab' }}>VEHICLES</h2>}
       bordered
       size="small"
       pagination={{ position: [ 'bottomCenter']}}
